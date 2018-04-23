@@ -41,3 +41,11 @@ group :development do
 end
 
 gem 'bootstrap-sass'
+
+gem 'devise'
+
+gem 'figaro', '1.0'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end

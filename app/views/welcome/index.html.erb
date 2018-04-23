@@ -1,2 +1,12 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1 class="display-1 text-center">
+  Blocipedia: Social, Markdown Wikis
+</h1>
+
+<div class="container">
+  <div class="jumbotron">
+    <h3 class="text-center">Create and Share Markdown Wikis</h3>
+      <p class="text-center">
+        <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-primary btn-md' %>
+      </p>
+  </div>
+</div>
