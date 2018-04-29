@@ -1,15 +1,23 @@
 require 'random_data'
 
-# Create Wikis
-User.create!(email: 'test@example.com', password: 'password')
+# Create Users
+5.times do
+  User.create!(
+          email: RandomData.random_email,
+          password: RandomData.random_sentence
+  )
+end
+users = User.all
 
+# Create Wikis
 50.times do
   Wiki.create!(
+          user: users.sample,
           title: RandomData.random_sentence,
           body: RandomData.random_paragraph,
-          user: User.first
   )
 end
 
 puts "Seed finished"
+puts "#{User.count} users created."
 puts "#{Wiki.count} wikis created."

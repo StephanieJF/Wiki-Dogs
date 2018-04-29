@@ -3,4 +3,5 @@ class Wiki < ApplicationRecord
 
   validates :title, length: { minimum: 3 }, presence: true
   validates :body, length: { minimum: 20 }, presence: true
+  validates :user, presence: true
 end
