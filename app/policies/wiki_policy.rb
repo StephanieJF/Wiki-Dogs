@@ -1,4 +1,5 @@
 class WikiPolicy < ApplicationPolicy
+  attr_reader :user, :wiki
   def index?
     user.present?
   end
@@ -24,7 +25,7 @@ class WikiPolicy < ApplicationPolicy
   end
 
   def destroy?
-    true if user == wiki.user || user.role == 'admin'
+    wiki.user == user || user.role == 'admin'
   end
 
   private
