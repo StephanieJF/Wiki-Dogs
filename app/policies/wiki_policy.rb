@@ -25,7 +25,7 @@ class WikiPolicy < ApplicationPolicy
   end
 
   def destroy?
-    wiki.user == user || user.role == 'admin'
+    user == wiki.user || user.role == 'admin'
   end
 
   private
