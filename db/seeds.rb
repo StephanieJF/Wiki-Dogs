@@ -12,12 +12,19 @@ users = User.all
 # Create Wikis
 50.times do
   Wiki.create!(
-          user: users.sample,
-          title: RandomData.random_sentence,
-          body: RandomData.random_paragraph,
+    user: users.sample,
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
   )
 end
 
+
+#Create a standard user
+standard = User.create!(
+    email:    'sjfischler@gmail.com',
+    password: 'helloworld',
+    role:     'user'
+)
 
 # Create an admin user
 admin = User.create!(
@@ -26,7 +33,7 @@ admin = User.create!(
     role:     'admin'
 )
 
-# Create a member
+# Create a premium member
 premium = User.create!(
     email:    'stephanie408@aol.com',
     password: 'helloworld',
