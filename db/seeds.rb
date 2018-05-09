@@ -19,12 +19,6 @@ users = User.all
 end
 
 
-#Create a standard user
-standard = User.create!(
-    email:    'sjfischler@gmail.com',
-    password: 'helloworld',
-    role:     'user'
-)
 
 # Create an admin user
 admin = User.create!(
