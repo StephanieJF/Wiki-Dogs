@@ -61,4 +61,9 @@ class WikisController < ApplicationController
   def wiki_params
     params.require(:wiki).permit(:title, :body)
   end
+
+  def user_not_authorized
+    flash[:alert] = "You must be authorized to do this."
+    redirect_to @wiki
+  end
 end

@@ -19,7 +19,6 @@ users = User.all
 end
 
 
-
 # Create an admin user
 admin = User.create!(
     email:    's.liepper@gmail.com',
