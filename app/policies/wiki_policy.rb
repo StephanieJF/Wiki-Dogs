@@ -1,11 +1,11 @@
 class WikiPolicy < ApplicationPolicy
   attr_reader :user, :record
   def index?
-    user.present?
+    true
   end
 
   def show
-    user.present?
+    false
   end
 
   def new
