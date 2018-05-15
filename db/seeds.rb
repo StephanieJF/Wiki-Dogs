@@ -1,10 +1,10 @@
-require 'random_data'
+require 'faker'
 
 # Create Users
 5.times do
   User.create!(
-          email: RandomData.random_email,
-          password: RandomData.random_sentence
+          email: Faker::Internet.email,
+          password: Faker::Internet.password
   )
 end
 users = User.all
