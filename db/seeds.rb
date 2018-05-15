@@ -13,8 +13,8 @@ users = User.all
 50.times do
   Wiki.create!(
     user: users.sample,
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph,
+    title: Faker::Hipster.sentence(3, false, 4),
+    body: Faker::Hipster.paragraph(2, false, 4)
   )
 end
 
