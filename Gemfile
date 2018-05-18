@@ -48,6 +48,8 @@ gem 'figaro', '1.0'
 
 gem 'pundit'
 
+gem 'faker', '~> 1.6', '>= 1.6.6'
+
 group :development, :test do
   gem 'rspec-rails'
 end

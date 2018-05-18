@@ -7,13 +7,14 @@
 
 <div class="container">
   <div class="row text-center">
-    <div class="col-sm-5">
-      <h3>Create as many public <br>wikis as you want!</h3>
+    <div class="col-sm-5 pull-left" id="public button">
+      <h3>Create Public Wikis</h3>
+      <h5>Sign up for a free plan to create and contribute to as many public wikis as you'd like!</h5>
       <%= link_to "Free Plan", new_user_registration_path, :class => 'btn btn-info btn-lg' %>
     </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5">
-      <h3>Create private wikis!</h3>
+    <div class="col-sm-5 pull-right" id="private button">
+      <h3>Create Private Wikis</h3>
+      <h5>Sign up for a premium plan to create private wikis and control who may contribute to them!</h5>
       <%= link_to "Premium Plan", new_user_registration_path, :class => 'btn btn-info btn-lg' %>
     </div>
   </div>
