@@ -13,21 +13,24 @@ h2 {
 }
 
 .col-sm-5 {
-  padding: auto;
   background-color: #eeeeee;
   border-radius: 10px;
   width: 200px;
-  height: 250px;
+  height: 200px;
 }
 
-#public\ button {
-  margin: 30px 0px 0px 50px;
+#public {
+  margin: 30px 0px 50px 50px;
 }
 
-#private\ button{
-  margin: 30px 50px 0px 0px;
+#private {
+  margin: 30px 50px 50px 0px;
 }
 
 h3 {
   padding: 20px 0px 20px 0px;
+}
+
+.btn {
+  margin-top: 20px;
 }
