@@ -37,13 +37,14 @@
     </div>
   <% end %>
 
+  <h2 id="account_type" class="upgrade_downgrade">You have a <%= current_user.role %> account.</h2>
   <% if current_user.standard? %>
-  <h3>Upgrade my account</h3>
-
-    <% else %>
-    <h3>Downgrade my account</h3>
+    <h3 class="upgrade_downgrade">Upgrade My Account</h3>
+    <%= link_to "Upgrade to Premium", new_charge_path, :class => 'btn btn-success' %>
+  <% else %>
+    <h3 class="upgrade_downgrade">Downgrade My Account</h3>
   <% end %>
-  <h3>Cancel my account</h3>
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-  <%= link_to "Back", :back %>
+    <h3 class="upgrade_downgrade">Cancel My Account</h3>
+    <p>Unhappy? <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+    <%= link_to "Back", :back %>
 </div>
