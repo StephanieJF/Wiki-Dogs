@@ -40,12 +40,12 @@
   <h2 id="account_type" class="upgrade_downgrade">You have a <%= current_user.role %> account.</h2>
   <% if current_user.standard? %>
     <h3 class="upgrade_downgrade">Upgrade My Account</h3>
-    <%= link_to "Upgrade to Premium", new_charge_path, :class => 'btn btn-success' %>
+    <%= link_to "Upgrade to Premium", new_charge_path, :class => 'btn btn-success', :id => 'edit_buttons' %>
   <% else %>
     <h3 class="upgrade_downgrade">Downgrade My Account</h3>
-    <%= link_to "Downgrade to Standard", downgrade_path(@user), :class => 'btn btn-warning' %>
+    <%= link_to "Downgrade to Standard", downgrade_path(@user), data: { confirm: "Are you sure you want to downgrade your account?" }, :class => 'btn btn-warning', :id => 'edit_buttons' %>
   <% end %>
     <h3 class="upgrade_downgrade">Cancel My Account</h3>
-    <p>Unhappy? <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+    <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger', :id => 'edit_buttons' %>
     <%= link_to "Back", :back %>
 </div>
