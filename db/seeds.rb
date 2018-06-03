@@ -13,7 +13,7 @@ users = User.all
 50.times do
   Wiki.create!(
     user: users.sample,
-    title: Faker::Hipster.sentence(3, false, 4),
+    title: Faker::Dog.meme_phrase,
     body: Faker::Hipster.paragraph(2, false, 4)
   )
 end
