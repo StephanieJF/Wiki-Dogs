@@ -1,33 +1,68 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #373737 url("https://images.unsplash.com/photo-1426287658398-5a912ce1ed0a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2ca73a2ef25eff85533a5efb4860f36&auto=format&fit=crop&w=2252&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .jumbotron.text-center {
+  background: none;
+  color: whitesmoke;
   width: 70%;
-  margin: 10px auto;
+  margin: 0px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+  margin-top: 100px;
 }
 
 h2 {
-  margin-top: 30px;
-  padding: 10px;
-  border: 1px solid black;
+  margin-top: 10px;
+  text-align: center;
+  color: whitesmoke;
 }
 
 .col-sm-5 {
-  padding: auto;
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 0.2);
   border-radius: 10px;
+  color: whitesmoke;
   width: 200px;
-  height: 250px;
+  height: 200px;
+  margin-top: 30px;
 }
 
-#public\ button {
-  margin: 30px 0px 0px 50px;
+#public-block {
+  margin: 30px 0px 50px 50px;
+  border: 2px solid #5bc0de;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#private\ button{
-  margin: 30px 50px 0px 0px;
+#private-block {
+  margin: 30px 50px 50px 0px;
+  border: 2px solid #5bc0de;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h3 {
   padding: 20px 0px 20px 0px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.upgrade_downgrade {
+  padding: 0px;
+}
+
+#account_type {
+  margin-top: 30px;
+}
+
+#edit_buttons {
+  margin: 0px;
 }

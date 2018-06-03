@@ -50,6 +50,8 @@ gem 'pundit'
 
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
+gem 'stripe'
+
 group :development, :test do
   gem 'rspec-rails'
 end
