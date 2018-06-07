@@ -1,6 +1,11 @@
 <body class="wikis">
   <div id="all">
     <h1>All Wikis</h1>
+    <% unless current_user == nil %>
+      <div class="col-md-6 pull-right">
+        <%= link_to "Create New Wiki", new_wiki_path, class: 'btn btn-success' %>
+    <% end %>
+    </div>
     <% @wikis.each do |wiki| %>
       <div class="media">
         <div class="media-body">
