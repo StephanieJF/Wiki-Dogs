@@ -2,19 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background: #373737 url("https://images.unsplash.com/photo-1426287658398-5a912ce1ed0a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d2ca73a2ef25eff85533a5efb4860f36&auto=format&fit=crop&w=2252&q=80");
+.welcome {
+  background: url("https://images.unsplash.com/photo-1516293315-cfe8602f0750?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=370891cd9c31e4700de6b087a1b55085&auto=format&fit=crop&w=2704&q=80");
   background-size: cover;
-  background-repeat: no-repeat;
 }
+
+#welcome-jumbo h1 {
+  font-family: 'Martel', serif;
+  font-weight: 700;
+  font-size: 100px;
+}
+
+#welcome-jumbo h2 {
+  font-family: 'Martel', serif;
+  font-weight: 700;
+ }
 
 .jumbotron.text-center {
   background: none;
-  color: whitesmoke;
   width: 70%;
   margin: 0px auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .row {
   margin-top: 100px;
@@ -23,25 +33,27 @@ body {
 h2 {
   margin-top: 10px;
   text-align: center;
-  color: whitesmoke;
 }
 
 .col-sm-5 {
-  background-color: rgba(238, 238, 238, 0.2);
+  background-color: rgba(238, 238, 238, 0.5);
   border-radius: 10px;
-  color: whitesmoke;
   width: 200px;
   height: 200px;
   margin-top: 30px;
 }
 
 #public-block {
+  font-family: 'Martel', serif;
+  font-weight: 700;
   margin: 30px 0px 50px 50px;
   border: 2px solid #5bc0de;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #private-block {
+  font-family: 'Martel', serif;
+  font-weight: 700;
   margin: 30px 50px 50px 0px;
   border: 2px solid #5bc0de;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -52,6 +64,8 @@ h3 {
 }
 
 .btn {
+  font-family: 'Martel', serif;
+  font-weight: 400;
   margin-top: 20px;
 }
 

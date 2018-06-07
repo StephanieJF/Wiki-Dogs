@@ -11,7 +11,10 @@
 
   <body>
   <div class="container">
-    <% unless action_name == "index" %>
+    <% unless controller_name == 'wikis' || controller_name == 'users' %>
+    <%= link_to "Explore Wikis", wikis_path, :class => 'navbar-link' %> -
+      <% end %>
+    <% unless controller_name == "welcome" %>
     <%= link_to "Home", welcome_index_path, :class => 'navbar-link pull-left' %>
     <% end %>
     <% if user_signed_in? %>

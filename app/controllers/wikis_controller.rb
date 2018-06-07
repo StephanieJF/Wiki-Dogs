@@ -1,8 +1,14 @@
 class WikisController < ApplicationController
 
   def index
-    @wikis = Wiki.all
-    authorize @wikis
+    @user = current_user
+    if current_user == nil
+      @wikis = Wiki.where(private: false)
+    elsif current_user.role == 'premium' || current_user.role == 'admin'
+      @wikis = Wiki.all
+    else
+      @wikis = Wiki.where(private: false)
+    end
   end
 
   def show
@@ -65,7 +71,7 @@ class WikisController < ApplicationController
   private
 
   def wiki_params
-    params.require(:wiki).permit(:title, :body)
+    params.require(:wiki).permit(:title, :body, :private)
   end
 
   def user_not_authorized

@@ -1,7 +1,7 @@
 class WikiPolicy < ApplicationPolicy
   attr_reader :user, :record
   def index?
-    true
+    false
   end
 
   def show
