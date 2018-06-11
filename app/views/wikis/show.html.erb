@@ -8,6 +8,8 @@
 <div class="row">
   <div class="col-md-8">
     <p><%= @wiki.body %></p>
+    <br>
+    <%= link_to "Back To Wikis", wikis_path(@wiki), class: 'btn btn-info' %>
   </div>
   <div class="col-md-4">
     <%= link_to "Edit", edit_wiki_path(@wiki), class: 'btn btn-success' %>

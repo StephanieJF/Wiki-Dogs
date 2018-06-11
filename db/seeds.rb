@@ -10,11 +10,12 @@ end
 users = User.all
 
 # Create Wikis
-50.times do
+20.times do
   Wiki.create!(
     user: users.sample,
     title: Faker::Dog.meme_phrase,
-    body: Faker::Hipster.paragraph(2, false, 4)
+    body: Faker::Hipster.paragraph(2, false, 4),
+    private: false
   )
 end
 
