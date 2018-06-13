@@ -17,6 +17,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.new-session, .new-registration, .edit-info {
+  background: url("https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=46133220eb9fb8b0d0f308e6c2d501ca&auto=format&fit=crop&w=2785&q=80");
+  background-color: #EDE9E2;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
 
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Martel', serif;
@@ -34,16 +41,17 @@ h1, h2, h3, h4, h5, h6, p {
 .border-form-div {
   max-width: 500px;
   padding: 19px 29px 29px;
-  margin: 0 auto 20px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
+  margin: 40px auto 20px;
+  background-color: #EDE9E2;
+  border: 2px solid #e5e5e5;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
+
 
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
@@ -53,6 +61,8 @@ h1, h2, h3, h4, h5, h6, p {
 .border-form-div input[type="text"],
 .border-form-div input[type="email"],
 .border-form-div input[type="password"] {
+  width: 100%;
+  background-color: #f5f3ef;
   font-size: 16px;
   height: auto;
   margin-bottom: 15px;

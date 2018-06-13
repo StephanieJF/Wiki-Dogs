@@ -9,7 +9,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
   <div class="container">
     <% unless controller_name == 'wikis' || controller_name == 'users' %>
     <%= link_to "Explore Wikis", wikis_path, :class => 'navbar-link' %>
@@ -43,7 +42,6 @@
   <% end %>
 
     <%= yield %>
-  </body>
 </html>
 
 
