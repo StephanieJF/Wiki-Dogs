@@ -1,5 +1,16 @@
 <h1>My User Page</h1>
-<p>User Name</p>
-<p>Role</p>
+<p>Email: <%= current_user.email.capitalize %></p>
+<p>Role: <%= current_user.role.capitalize %></p>
 <p>My Wikis</p>
+  <% if @wikis.count > 0 %>
+    <% @wikis.each do |wiki| %>
+    <div>
+    <%= link_to wiki.title, wiki %>
+    </div>
+  <% end %>
+  <% else %>
+    <p>You have not created any wikis</p>
+<% end %>
+
+
 <p><%= link_to "View All Wikis", wikis_path, :class => 'user-page' %></p>
