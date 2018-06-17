@@ -1,4 +1,18 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com
 
+.user-show {
+  background: url("https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=46133220eb9fb8b0d0f308e6c2d501ca&auto=format&fit=crop&w=2785&q=80");
+  background-color: #EDE9E2;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  text-align: center;
+  font-family: 'Martel', serif;
+  font-weight: 700;
+}
+
+.user {
+  margin-top: 50px;
+}

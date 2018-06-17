@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/css?family=Martel:300,400,600,700,900" rel="stylesheet">
   </head>
 
-  <body>
   <div class="container">
     <% unless controller_name == 'wikis' || controller_name == 'users' %>
     <%= link_to "Explore Wikis", wikis_path, :class => 'navbar-link' %>
@@ -19,7 +19,7 @@
     <%= link_to "Home", welcome_index_path, :class => 'navbar-link pull-left' %>
     <% end %>
     <% if user_signed_in? %>
-      Signed in as: <strong><%= current_user.email %></strong> |
+      Signed in as: <strong><%= current_user.email.capitalize %></strong> |
       <%= link_to 'My User Page', users_show_path, :class => 'navbar-link' %> |
       <%= link_to 'Edit Account Information', edit_user_registration_path, :class => 'navbar-link' %> -
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
@@ -43,7 +43,6 @@
   <% end %>
 
     <%= yield %>
-  </body>
 </html>
 
 
