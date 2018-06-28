@@ -7,7 +7,7 @@ class CollaboratorsController < ApplicationController
 
     emails_list.each do |email| #iterate on email addresses
       email = @user
-      @wiki.collaborator(@user)
+      @wiki.collaborators.new(@user)
     end
   end
 end
