@@ -28,6 +28,19 @@
           <%= f.check_box :private %> Private wiki
         <% end %>
       </div>
+
+      <p>Collaborators</p>
+      <ul>
+        <% @wiki.collaborators.each do |collaborator| %>
+          <li><%= collaborator %></li>
+        <% end %>
+      </ul>
+
+        <div class="form-group">
+          <%= f.label :emails_list %>
+          <%= f.text_field :emails_list, class: 'form-control' %> Add or remove collaborator emails separated by
+          space!
+        </div>
     <% end %>
 
     <div class="form-group">
