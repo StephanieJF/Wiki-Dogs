@@ -7,7 +7,6 @@ class User < ApplicationRecord
   end
 
   has_many :wikis
-  has_many :collaborators, :through => :wikis
 
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable

@@ -38,10 +38,8 @@ class WikisController < ApplicationController
     @wiki.assign_attributes(wiki_params)
     authorize @wiki
 
-    emails = params[:wiki][:emails_list]
-    emails_list = emails.split ","
-
-    emails_list.each do |email| #iterate on email addresses
+    if params[:wiki][:collaborators]
+      @wiki.collaborators = params[:wiki][:collaborators].split ","
     end
 
     if @wiki.save

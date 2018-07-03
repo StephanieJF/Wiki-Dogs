@@ -1,10 +1,11 @@
 <body class="user-show">
+<div class="border-form-div">
   <div class="user">
     <h1>My User Page</h1>
   </div>
-      <p>Email: <%= current_user.email.capitalize %></p>
-      <p>Role: <%= current_user.role.capitalize %></p>
-      <p>My Wikis</p>
+      <p><span class="emphasis">Email:</span> <%= current_user.email.capitalize %></p>
+      <p><span class="emphasis">Role:</span> <%= current_user.role.capitalize %></p>
+      <p><span class="emphasis">My Wikis</span></p>
         <% if @wikis.count > 0 %>
           <% @wikis.each do |wiki| %>
           <div>
@@ -17,4 +18,5 @@
 
 
       <p><%= link_to "View All Wikis", wikis_path, :class => 'user-page' %></p>
+</div>
 </body>
