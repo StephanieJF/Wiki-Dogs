@@ -1,12 +1,26 @@
 <body class="edit-info">
-  <div class="border-form-div">
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="border-form-div">
+  <h2>Edit Your <br>Account Information</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<ul class="nav md-pills nav-justified pills-secondary">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#panel14" role="tab">Login Info</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#panel11" role="tab">Account Type</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+  <div class="tab-pane fade in show active" id="panel14" role="tabpanel">
+    <br>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :email %><br />
+        <%= f.label :email %><br/>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
@@ -15,21 +29,21 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br/>
         <%= f.password_field :password, autocomplete: "off" %>
         <% if @minimum_password_length %>
-          <br />
+          <br/>
           <em><%= @minimum_password_length %> characters minimum</em>
         <% end %>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation %><br/>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br/>
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
 
@@ -37,17 +51,26 @@
         <%= f.submit "Update" %>
       </div>
     <% end %>
+  </div>
 
-    <h2 id="account_type" class="upgrade_downgrade">You have a <%= current_user.role %> account.</h2>
+  <div class="tab-pane fade" id="panel11" role="tabpanel">
+    <br>
+
+    <h2 id="account_type" class="upgrade_downgrade">You have a
+      <span class="underline"><%= current_user.role.capitalize %></span> account.</h2>
     <% if current_user.standard? %>
       <h3 class="upgrade_downgrade">Upgrade My Account</h3>
       <%= link_to "Upgrade to Premium", new_charge_path, :class => 'btn btn-success', :id => 'edit_buttons' %>
     <% else %>
       <h3 class="upgrade_downgrade">Downgrade My Account</h3>
-      <%= link_to "Downgrade to Standard", downgrade_path(@user), data: { confirm: "Are you sure you want to downgrade your account? Your private wikis will become public wikis!" }, :class => 'btn btn-warning', :id => 'edit_buttons' %>
+      <%= link_to "Downgrade to Standard", downgrade_path(@user), data: {confirm: "Are you sure you want to downgrade your account? Your private wikis will become public wikis!"}, :class => 'btn btn-warning', :id => 'edit_buttons' %>
     <% end %>
-      <h3 class="upgrade_downgrade">Cancel My Account</h3>
-      <%= button_to "Cancel Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger', :id => 'edit_buttons' %>
-      <%= link_to "Back", :back %>
+    <h3 class="upgrade_downgrade">Cancel My Account</h3>
+    <%= button_to "Cancel Account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete, class: 'btn btn-danger', :id => 'edit_buttons' %>
+    </div>
   </div>
+</div>
 </body>
+
+
+
