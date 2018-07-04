@@ -1,19 +1,11 @@
 class WikisController < ApplicationController
 
   def index
-    @user = current_user
-    if current_user == nil
-      @wikis = Wiki.where(private: false)
-    elsif current_user.role == 'premium' || current_user.role == 'admin'
-      @wikis = Wiki.all
-    else
-      @wikis = Wiki.where(private: false)
-    end
+    @wikis = policy_scope(Wiki)
   end
 
   def show
     @wiki = Wiki.find(params[:id])
-    authorize @wiki
   end
 
   def new
@@ -45,6 +37,10 @@ class WikisController < ApplicationController
     @wiki = Wiki.find(params[:id])
     @wiki.assign_attributes(wiki_params)
     authorize @wiki
+
+    if params[:wiki][:collaborators]
+      @wiki.collaborators = params[:wiki][:collaborators].split ","
+    end
 
     if @wiki.save
       flash[:notice] = "Wiki was updated."
