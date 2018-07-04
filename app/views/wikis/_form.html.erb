@@ -28,6 +28,11 @@
           <%= f.check_box :private %> Private wiki
         <% end %>
       </div>
+
+        <div class="form-group">
+          <%= f.label :collaborators %>
+          <%= f.text_field :collaborators, class: 'form-control', placeholder: "Add emails separated by a comma" %>
+        </div>
     <% end %>
 
     <div class="form-group">
