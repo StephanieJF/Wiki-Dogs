@@ -40,9 +40,9 @@ group :development do
   gem 'listen', '~> 3.0.5'
 end
 
-gem 'bootstrap-sass'
+gem "bootstrap-sass", ">= 3.4.1"
 
-gem 'devise'
+gem "devise", ">= 4.6.0"
 
 gem 'figaro', '1.0'
 
@@ -53,6 +53,12 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'stripe'
 
 gem 'redcarpet', '~> 3.0.0'
+
+gem "nokogiri", ">= 1.8.5"
+
+gem "rack", ">= 2.0.6"
+
+gem "loofah", ">= 2.2.3"
 
 group :development, :test do
   gem 'rspec-rails'
