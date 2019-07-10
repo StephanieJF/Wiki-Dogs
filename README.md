@@ -1,3 +1,3 @@
-##Wiki-Dogs
+## Wiki-Dogs
 
-Made at [Bloc](http://bloc.io)
+Wikipedia style CRUD application using Ruby on Rails
