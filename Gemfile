@@ -52,7 +52,7 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 
 gem 'stripe'
 
-gem 'redcarpet', '~> 3.0.0'
+gem 'redcarpet', '~> 3.5.1'
 
 gem "nokogiri", ">= 1.8.5"
 
